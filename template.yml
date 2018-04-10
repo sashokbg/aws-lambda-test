@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform:
+- AWS::Serverless-2016-10-31
+- AWS::CodeStar
+
+Parameters:
+  ProjectId:
+    Type: String
+    Description: Testing AWS locally
+
+Resources:
+  PostHelloWorld:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: fr.ddf.aws.handlers.HelloWorldHandler
+      CodeUri: ./target/aws-lambda-test-1.0.jar
+      Runtime: java8
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /hello
+            Method: post
