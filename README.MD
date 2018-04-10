@@ -55,6 +55,26 @@ https://docs.aws.amazon.com/cli/latest/userguide/awscli-install-windows.html
 
 ### Lancement
 
+- S'authentifier avec aws cli
+  - Il faut créer un utilisateur dans la console AWS et lui attribuer des droits d'administration:
+
+https://console.aws.amazon.com/iam/home?#/users/
+
+- Puis obtenir les access keys de votre utilisateur:
+
+https://console.aws.amazon.com/iam/home?#/users/test-user?section=security_credentials
+
+Remplacez **test-user** dans l'URL avec l'identifiant de votre utilisateur
+
+Et les renseigner avec la commande:
+
+```
+aws configure
+```
+
+
+
+
 - Se positionner dans le répertoire du projet
 
 ```
